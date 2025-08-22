@@ -1,17 +1,69 @@
-# Fake News Fact Checker (Semantic Match)
+# 📰 Fake News Fact Checker (Semantic Match)
 
-An AI-powered fact-checking web application that uses semantic similarity to detect fake news by comparing user-submitted claims or headlines against live news headlines from trusted sources.
+**Check whether a news headline or claim is REAL, PARTIALLY TRUE, or FAKE by matching it against live headlines from trusted news sources.**
 
-The app fetches **live headlines** from multiple trusted news sources such as BBC, Times of India, Reuters, NDTV, The Hindu, Indian Express, New York Times, and more, builds **semantic embeddings** using Sentence Transformers, and finds the **closest matches** to the user’s input claim.
+---
 
-## Features
+## 🚀 About
 
-- Real-time fetching of news headlines using RSS feeds from multiple trusted sources.
-- Semantic similarity matching using pre-trained Sentence Transformers (all-MiniLM-L6-v2).
-- Categorizes claims based on cosine similarity into:
-  - **REAL** (similarity ≥ 0.80)
-  - **PARTIALLY TRUE** (similarity 0.60–0.80)
-  - **FAKE / UNVERIFIED** (similarity < 0.60)
-- User-friendly interface powered by Gradio for easy interaction.
-- Displays best-matching headlines with source, similarity score, and URL link.
-- Shows top-K closest matching headlines in a tabular format.
+This app uses **semantic similarity** with embeddings from the [Sentence Transformers](https://www.sbert.net/) library to compare your input claim with **live headlines** fetched from popular news sources including:
+
+- BBC  
+- Times of India  
+- Reuters  
+- NDTV  
+- The Hindu  
+- Indian Express  
+- New York Times  
+- Hindustan Times  
+- Moneycontrol  
+- ANI News  
+- Economic Times  
+- The Guardian  
+- Al Jazeera  
+- CNN  
+- Times Now  
+
+It then predicts:
+
+- **REAL** → Best match similarity ≥ 0.80  
+- **PARTIALLY TRUE** → Similarity between 0.60 and 0.80  
+- **FAKE / UNVERIFIED** → Similarity < 0.60  
+
+---
+
+## 📌 Features
+
+- Fetches **live news headlines** via RSS feeds  
+- Builds **semantic embeddings** for all headlines  
+- Finds **closest matches** to the input claim  
+- Shows **top K matches** with similarity scores  
+- Displays **source and URL** of matching news  
+- Dynamic **Gradio UI** for entering claims and analyzing in real time  
+
+---
+
+## 🖥 Usage
+
+1. Select the news sources you want to use for checking.  
+2. Click **Refresh Headlines Index** to fetch and index the latest headlines.  
+3. Enter your news claim or headline in the textbox.  
+4. Click **Analyze Claim** to see:
+
+   - **Prediction** (REAL, PARTIALLY TRUE, or FAKE / UNVERIFIED)  
+   - **Best matching headline** with source and similarity score  
+   - **Top K matches** in a table with clickable URLs  
+
+---
+
+## ⚡ Quick Start (Locally)
+
+```bash
+# Clone the repository
+git clone https://huggingface.co/spaces/<your-username>/<your-space-name>
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+python app.py
