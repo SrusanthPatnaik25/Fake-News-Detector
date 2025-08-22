@@ -1,0 +1,7 @@
+transformers
+torch
+gradio
+scikit-learn
+feedparser
+pandas
+sentence-transformers
