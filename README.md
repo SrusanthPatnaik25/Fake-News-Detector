@@ -32,6 +32,13 @@ It then predicts:
 
 ---
 
+## 🌐 Live Demo
+
+Try the app live here:  
+👉 [Fake News Fact Checker (Semantic Match)](https://srusanth-fake-news-detector-ai-gradio.hf.space/)
+
+---
+
 ## 📌 Features
 
 - Fetches **live news headlines** via RSS feeds  
@@ -60,7 +67,7 @@ It then predicts:
 
 ```bash
 # Clone the repository
-git clone https://huggingface.co/spaces/<your-username>/<your-space-name>
+git clone https://huggingface.co/spaces/srusanth/fake-news-detector-ai-gradio
 
 # Install dependencies
 pip install -r requirements.txt
